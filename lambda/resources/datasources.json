@@ -1,0 +1,20 @@
+{
+        "bodyTemplate7Data": {
+            "type": "object",
+            "objectId": "bt7Sample",
+            "title": "Außer Haus Simulator",
+            "backgroundImage": {
+                "contentDescription": null,
+                "smallSourceUrl": null,
+                "largeSourceUrl": null,
+                "sources": [
+                    {
+                        "url": "https://i.imgur.com/1p3IPND.gif",
+                        "size": "small",
+                        "widthPixels": 0,
+                        "heightPixels": 0
+                    }
+                ]
+            }
+        }
+    }

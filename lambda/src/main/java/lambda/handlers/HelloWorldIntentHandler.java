@@ -11,7 +11,7 @@
      the specific language governing permissions and limitations under the License.
 */
 
-package virtualarchitect.handlers;
+package main.java.lambda.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;

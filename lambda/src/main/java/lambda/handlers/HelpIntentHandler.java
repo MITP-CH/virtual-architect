@@ -11,28 +11,30 @@
      the specific language governing permissions and limitations under the License.
 */
 
-package virtualarchitect.handlers;
+package main.java.lambda.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
-import com.amazon.ask.model.SessionEndedRequest;
 
 import java.util.Optional;
 
-import static com.amazon.ask.request.Predicates.requestType;
+import static com.amazon.ask.request.Predicates.intentName;
 
-public class SessionEndedRequestHandler implements RequestHandler {
+public class HelpIntentHandler implements RequestHandler {
 
     @Override
     public boolean canHandle(HandlerInput input) {
-        return input.matches(requestType(SessionEndedRequest.class));
+        return input.matches(intentName("AMAZON.HelpIntent"));
     }
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        // any cleanup logic goes here
-        return input.getResponseBuilder().build();
+        String speechText = "You can say hello to me!";
+        return input.getResponseBuilder()
+                .withSpeech(speechText)
+                .withSimpleCard("HelloWorld", speechText)
+                .withReprompt(speechText)
+                .build();
     }
-
 }

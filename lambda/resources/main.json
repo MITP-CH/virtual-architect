@@ -1,0 +1,24 @@
+{
+        "type": "APL",
+        "version": "1.0",
+        "theme": "dark",
+        "import": [],
+        "resources": [],
+        "styles": {},
+        "layouts": {},
+        "mainTemplate": {
+            "parameters": [
+                "payload"
+            ],
+            "items": [
+                {
+                    "type": "Image",
+                    "source": "${payload.bodyTemplate7Data.backgroundImage.sources[0].url}",
+                    "scale": "best-fill",
+                    "position": "absolute",
+                    "width": "100vw",
+                    "height": "100vh"
+                }
+            ]
+        }
+    }

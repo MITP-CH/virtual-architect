@@ -11,27 +11,29 @@
      the specific language governing permissions and limitations under the License.
 */
 
-package virtualarchitect.handlers;
+package main.java.lambda.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
-import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
 
 import java.util.Optional;
 
-import static com.amazon.ask.request.Predicates.requestType;
+import static com.amazon.ask.request.Predicates.intentName;
 
-public class LaunchRequestHandler implements RequestHandler {
+// 2018-July-09: AMAZON.FallackIntent is only currently available in en-US locale.
+//              This handler will not be triggered except in that locale, so it can be
+//              safely deployed for any locale.
+public class FallbackIntentHandler implements RequestHandler {
 
     @Override
     public boolean canHandle(HandlerInput input) {
-        return input.matches(requestType(LaunchRequest.class));
+        return input.matches(intentName("AMAZON.FallbackIntent"));
     }
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Welcome to the Alexa Skills Kit, you can say hello";
+        String speechText = "Sorry, I don't know that. You can say try saying help!";
         return input.getResponseBuilder()
                 .withSpeech(speechText)
                 .withSimpleCard("HelloWorld", speechText)

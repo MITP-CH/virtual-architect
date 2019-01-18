@@ -1,16 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>mitp</groupId>
-  <artifactId>lambda</artifactId>
+  <artifactId>dynamo</artifactId>
   <version>0.1</version>
-  <packaging>jar</packaging>
-  <name>alexa</name>
-  <description>AWS Lambda function to handle Alexa requests</description>
+  <name>dynamo</name>
+  <description>Simple test console application client for AWS DynamoDB</description>
   <dependencies>
-  <dependency>
-  	<groupId>com.amazon.alexa</groupId>
-  	<artifactId>ask-sdk</artifactId>
-  	<version>2.11.2</version>
-  </dependency>
+  	<dependency>
+  		<groupId>com.amazonaws</groupId>
+  		<artifactId>aws-java-sdk-dynamodb</artifactId>
+  		<version>1.11.482</version>
+  	</dependency>
   </dependencies>
 </project>
