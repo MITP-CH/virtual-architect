@@ -1,4 +1,4 @@
-package net.leanix.pathfinder.samples.simpleCalls;
+package lcmd;
 
 import net.leanix.api.FactSheetsApi;
 import net.leanix.api.GraphqlApi;
