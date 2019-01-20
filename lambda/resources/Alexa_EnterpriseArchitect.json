@@ -1,0 +1,211 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "enterprise architect",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": [
+                        "go back"
+                    ]
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "cancel"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": [
+                        "start over"
+                    ]
+                },
+                {
+                    "name": "IntroIntent",
+                    "slots": [],
+                    "samples": [
+                        "introduction",
+                        "introduce yourself"
+                    ]
+                },
+                {
+                    "name": "GlossaryIntent",
+                    "slots": [
+                        {
+                            "name": "Term",
+                            "type": "Term"
+                        }
+                    ],
+                    "samples": [
+                        "{Term}",
+                        "about {Term}"
+                    ]
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [],
+                    "samples": [
+                        "good evening",
+                        "good afternoon",
+                        "good morning",
+                        "greetings",
+                        "hello"
+                    ]
+                },
+                {
+                    "name": "AdminIntent",
+                    "slots": [
+                        {
+                            "name": "workspace",
+                            "type": "Workspace"
+                        }
+                    ],
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "Factsheet",
+                    "values": [
+                        {
+                            "id": "1",
+                            "name": {
+                                "value": "provider",
+                                "synonyms": [
+                                    "providers"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "name": {
+                                "value": "user group",
+                                "synonyms": [
+                                    "user groups"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "name": {
+                                "value": "it component",
+                                "synonyms": [
+                                    "it components"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "4",
+                            "name": {
+                                "value": "tech stack",
+                                "synonyms": [
+                                    "tech stacks"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "5",
+                            "name": {
+                                "value": "business capability",
+                                "synonyms": [
+                                    "business capabilities"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "6",
+                            "name": {
+                                "value": "interface",
+                                "synonyms": [
+                                    "interfaces"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "7",
+                            "name": {
+                                "value": "data object",
+                                "synonyms": [
+                                    "data objects"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "8",
+                            "name": {
+                                "value": "project",
+                                "synonyms": [
+                                    "projects"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "9",
+                            "name": {
+                                "value": "process",
+                                "synonyms": [
+                                    "processes"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "10",
+                            "name": {
+                                "value": "application",
+                                "synonyms": [
+                                    "applications"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Term",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "CDQM"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Workspace",
+                    "values": [
+                        {
+                            "id": "1",
+                            "name": {
+                                "value": "training"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "name": {
+                                "value": "demo"
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "name": {
+                                "value": "mitp"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

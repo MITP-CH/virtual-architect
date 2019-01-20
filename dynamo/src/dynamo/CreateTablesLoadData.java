@@ -21,8 +21,12 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.TimeZone;
 
+
 import com.amazonaws.auth.profile.ProfileCredentialsProvider;
+import com.amazonaws.regions.Regions;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.amazonaws.services.dynamodbv2.document.DynamoDB;
 import com.amazonaws.services.dynamodbv2.document.Item;
 import com.amazonaws.services.dynamodbv2.document.Table;
@@ -37,8 +41,16 @@ import com.amazonaws.services.dynamodbv2.model.ProvisionedThroughput;
 
 public class CreateTablesLoadData {
 
-    static DynamoDB dynamoDB = new DynamoDB(new AmazonDynamoDBClient(
-            new ProfileCredentialsProvider()));
+	static AmazonDynamoDB client = AmazonDynamoDBClientBuilder.standard()
+	        .withRegion(Regions.EU_WEST_1)
+            .withCredentials(new ProfileCredentialsProvider("default"))
+            .build();
+	
+	static DynamoDB dynamoDB = new DynamoDB(client);
+	// static DynamoDB dynamoDB = new DynamoDB(AmazonDynamoDBClientBuilder.standard());
+	
+    //static DynamoDB dynamoDB = new DynamoDB(new AmazonDynamoDBClient(
+    //        new ProfileCredentialsProvider()));
 
     static SimpleDateFormat dateFormatter = new SimpleDateFormat(
             "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
@@ -62,6 +74,7 @@ public class CreateTablesLoadData {
             // Parameter6/7: range key and type (if applicable)
 
             createTable(productCatalogTableName, 10L, 5L, "Id", "N");
+/*
             createTable(forumTableName, 10L, 5L, "Name", "S");
             createTable(threadTableName, 10L, 5L, "ForumName", "S", "Subject", "S");
             createTable(replyTableName, 10L, 5L, "Id", "S", "ReplyDateTime", "S");
@@ -70,7 +83,7 @@ public class CreateTablesLoadData {
             loadSampleForums(forumTableName);
             loadSampleThreads(threadTableName);
             loadSampleReplies(replyTableName);
-
+*/
         } catch (Exception e) {
             System.err.println("Program failed:");
             System.err.println(e.getMessage());
