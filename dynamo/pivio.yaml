@@ -1,0 +1,13 @@
+---
+id: "GLBSSACW0001"
+name: "Access Collection Web-YYY"
+type: "Application"
+description: "B2B self-service web app for collection"
+owner: "Juha@Myllaeri.ch"
+tags:
+- "No"
+- "Shared"
+lifecycle: "production"
+version: "0.2"
+relations: []
+api_token: zaU8S2nVrg5NfMrazAU7S8DGNJr6qEzKfSgAsUOW
